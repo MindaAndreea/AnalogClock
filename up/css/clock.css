@@ -1,1 +1,110 @@
-/*# sourceMappingURL=clock.css.map */
+body {
+  background: url(/images/bg.png);
+}
+
+#container {
+  margin: calc(20px + 15vh) auto;
+  background: url(/images/clock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 45vh;
+  width: 45vw;
+  position: relative;
+}
+@media (max-width: 700px) {
+  #container {
+    margin: calc(20px + 5vh) auto;
+  }
+}
+#container-hour, #container-second, #container-minute {
+  position: absolute;
+  background: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+@media (min-width: 1000px) {
+  #container-hour {
+    width: 9px;
+    left: 49%;
+    height: 22%;
+    top: 29%;
+  }
+  #container-minute {
+    width: 6px;
+    left: 49.2%;
+    height: 30%;
+    top: 22%;
+  }
+  #container-second {
+    background: red;
+    width: 2.5px;
+    left: 49.3%;
+    height: 33%;
+    top: 19%;
+  }
+}
+@media (max-width: 1000px) {
+  #container-hour {
+    width: 9px;
+    left: 49%;
+    height: 16%;
+    top: 33%;
+  }
+  #container-minute {
+    width: 6px;
+    left: 49.2%;
+    height: 23%;
+    top: 28%;
+  }
+  #container-second {
+    background: red;
+    width: 2.5px;
+    left: 49.3%;
+    height: 26%;
+    top: 24%;
+  }
+}
+@media (max-width: 800px) {
+  #container-hour {
+    width: 9px;
+    left: 49%;
+    height: 13%;
+    top: 37%;
+  }
+  #container-minute {
+    width: 6px;
+    left: 49.2%;
+    height: 16%;
+    top: 33%;
+  }
+  #container-second {
+    background: red;
+    width: 2.5px;
+    left: 49.3%;
+    height: 20%;
+    top: 30%;
+  }
+}
+@media (max-width: 500px) {
+  #container-hour {
+    width: 7px;
+    left: 48%;
+    height: 9%;
+    top: 41%;
+    opacity: 0.8;
+  }
+  #container-minute {
+    width: 4px;
+    left: 48%;
+    height: 10%;
+    top: 38%;
+    opacity: 0.8;
+  }
+  #container-second {
+    width: 2px;
+    height: 13%;
+    top: 36%;
+    opacity: 0.8;
+  }
+}/*# sourceMappingURL=clock.css.map */

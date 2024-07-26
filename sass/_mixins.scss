@@ -1,0 +1,51 @@
+@mixin large {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin min-large {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin really-small {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin hour {
+  width: 9px;
+  left: 49%;
+}
+
+@mixin minute {
+  width: 6px;
+  left: 49.2%;
+}
+
+@mixin second {
+  background: red;
+  width: 2.5px;
+  left: 49.3%;
+}
+
+@mixin background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

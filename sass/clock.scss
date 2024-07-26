@@ -1,0 +1,112 @@
+@import "mixins";
+
+body {
+  background: url(/images/bg.png);
+}
+
+#container {
+  margin: calc(20px + 15vh) auto;
+  background: url(/images/clock.png);
+  @include background;
+  height: 45vh;
+  width: 45vw;
+  position: relative;
+
+  @include small {
+    margin: calc(20px + 5vh) auto;
+  }
+
+  &-hour,
+  &-second,
+  &-minute {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+  }
+
+  @include min-large {
+    &-hour {
+      @include hour;
+      height: 22%;
+      top: 29%;
+    }
+
+    &-minute {
+      @include minute;
+      height: 30%;
+      top: 22%;
+    }
+
+    &-second {
+      @include second;
+      height: 33%;
+      top: 19%;
+    }
+  }
+
+  @include large {
+    &-hour {
+      @include hour;
+      height: 16%;
+      top: 33%;
+    }
+
+    &-minute {
+      @include minute;
+      height: 23%;
+      top: 28%;
+    }
+
+    &-second {
+      @include second;
+      height: 26%;
+      top: 24%;
+    }
+  }
+
+  @include medium {
+    &-hour {
+      @include hour;
+      height: 13%;
+      top: 37%;
+    }
+
+    &-minute {
+      @include minute;
+      height: 16%;
+      top: 33%;
+    }
+
+    &-second {
+      @include second;
+      height: 20%;
+      top: 30%;
+    }
+  }
+
+  @include really-small {
+    &-hour {
+      width: 7px;
+      left: 48%;
+      height: 9%;
+      top: 41%;
+      opacity: 0.8;
+    }
+
+    &-minute {
+      width: 4px;
+      left: 48%;
+      height: 10%;
+      top: 38%;
+      opacity: 0.8;
+    }
+
+    &-second {
+      width: 2px;
+      height: 13%;
+      top: 36%;
+      opacity: 0.8;
+    }
+  }
+}
